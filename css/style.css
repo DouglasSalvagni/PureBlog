@@ -1,6 +1,10 @@
+/* reset */
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     color: #E1F5C4;
@@ -10,10 +14,81 @@
 /* pattern */
 
 .container {
-    width: 992px;
-    margin: 0 auto;
-    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
 }
+
+    @media (min-width: 1170px) {
+        .container {
+            max-width: 1170px;
+            padding: 0;
+        }
+        
+    }
+
+/* linha */
+.row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+    .row:before,
+    .row:after {
+        content: "";
+        display: table;
+    }
+    .row:after {
+        clear: both;
+    }
+
+.col {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    margin-right: -4px;
+
+    *zoom: 1;
+    *display: inline;
+}
+
+/* duas colonas */
+@media (min-width: 480px) {
+    .col-2 {
+        width: 50%;
+    }
+}
+
+/* tres colunas */
+@media (min-width: 728px) {
+    .col-3 {
+        width: 33.3333%;
+    }
+}
+
+/* sidebar */
+@media (min-width: 992px) {
+    .col-content {
+       width: 70%;
+    }
+
+    .col-sidebar {
+       width: 30%;
+    }
+}
+
+.teste {
+    background: #f5d5fe;
+    padding: 5px;
+    text-align: center;
+    margin: 2px 0;
+    color: #fff;
+}
+
+/*--------*/
 
 .left {
     float: left;}
@@ -29,7 +104,7 @@ header {
 
 header .logo a{
     color: #E1F5C4;
-    font-size: 60px;
+    font-size: 2em;
 }
 
 header .logo a span{
@@ -45,8 +120,16 @@ header .logo a span{
 
 .menuTop ul li a{
     display: inline-block;
+    font-size: 0.8em;
     padding: 5px 5px;
     margin: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.menuTop ul li a:hover {
+    color: white;
+    transition: all 0.2s ease-in-out;
 }
 
 .topContent {
@@ -57,6 +140,7 @@ header .logo a span{
 nav {
     display: block;
     background: #E1F5C4;
+    text-align: center;
 }
 
 nav ul li {
@@ -66,10 +150,28 @@ nav ul li {
 nav ul li a {
     display: inline-block;
     color: #333;
-    padding: 5px 10px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    padding: 10px 10px;
 }
 
 nav ul li a:hover {
     background: #333; 
     color: #E1F5C4;
+}
+
+main {
+    background: white;
+}
+
+
+footer {
+    background: #333;
+    text-align: center;
+    padding: 50px 0;
+}
+
+footer>p {
+    margin-top: 20px;
+    font-size: 0.6em;
 }
