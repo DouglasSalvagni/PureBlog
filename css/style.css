@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #E1F5C4;}
+
+
+/* pattern */
+
+.container {
+    width: 992px;
+    margin: 0 auto;
+    display: block;
+}
+
+.left {
+    float: left;}
+
+.right{
+    float: right;}
+
+/* ---------*/
+
+header {
+    background: #F9D423;
+    height: 200px;
+}
+
+
+header .logo a{
+    color: #E1F5C4;}
+
+header .logo a span{
+    color: #333;}
+
+.menuTop {
+    display: block;
+    height: 30px;
+}
+
+.menuTop ul li {
+   display: inline;}
+
+.menuTop ul li a{
+    display: inline-block;
+    padding: 5px 5px;
+    margin: 5px;
+}
+
+nav {
+    display: block;
+    background: #E1F5C4;
+}
+
+nav ul li {
+    display: inline-block
+}
+
+nav ul li a {
+    color: #333;
+}
