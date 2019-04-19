@@ -103,20 +103,25 @@
 /* ---------*/
 
 header {
-    background: #F9D423; 
+    background: #F9D423;
 }
 
 header .logo a{
     color: #E1F5C4;
-    font-size: 2em;
+    font-size: 1em;
+    transition: 0.4s;
 }
 
 header .logo a span{
     color: #333;}
 
 .menuTop {
-    display: block;
+    position: absolute;
+    top: -30px;
+    width: 100%;
     height: 30px;
+    transition: 0.4s;
+    overflow: hidden;
 }
 
 .menuTop ul li {
@@ -124,7 +129,7 @@ header .logo a span{
 
 .menuTop ul li a{
     display: inline-block;
-    font-size: 0.8em;
+    font-size: 0.6em;
     padding: 5px 5px;
     margin: 5px;
     letter-spacing: 1px;
@@ -137,11 +142,19 @@ header .logo a span{
 }
 
 .topContent {
-    height: 200px;
-    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.topContent i {
+    font-size: 25px;
+    line-height: 40px;
 }
 
 nav {
+    position: absolute;
+    left: -100vh;
+    overflow: hidden;
     display: block;
     background: #E1F5C4;
     text-align: center;
@@ -181,20 +194,24 @@ main {
     border-radius: 10px;
     margin-top: 10px;
     margin-left: 35%;
+    cursor: pointer;
 }
 
 .card-1 h3{
     font-size: 1.6em;
-    margin-top: 10px;
+    margin-top: 30px;
     text-align: center;
     color: #333;
 }
 
 .card-1 p{
     font-size: 1em;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
+    letter-spacing: 2px;
+    line-height: 30px;
     color: #333;
+    font-style: italic;
 }
 
 .card-1 img {
@@ -223,21 +240,54 @@ footer>p {
     .card-1 {
         width: 50%;
     }
+
+    .card-1 p{
+        font-size: 1em;
+        line-height: 20px;
+    }
 }
 
-/* tres colunas */
 @media (min-width: 728px) {
+    .menuTop {
+        display: block;
+        top:0;
+    }
+    .topContent i {
+        display: none;
+    }
+    header .logo a{
+        color: #E1F5C4;
+        font-size: 2em;
+    }
+    .topContent {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: 200px;
+        transition: 0.4s;
+    }
+    nav {
+        position: relative;
+        left: 0;
+    }
     .card-1 {
         width: 50%;
     }
+    .card-1 p{
+        font-size: 1.2em;
+        line-height: 30px;
+    }
     
 
-/* sidebar */
 @media (min-width: 992px) {
     .card-1 {
         width: 100%;
     }
     .card-1 img {
         max-width: 100%;
+    }
+
+    .card-1 p{
+        font-size: 1em;
+        line-height: 20px;
     }
 }
