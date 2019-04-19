@@ -80,6 +80,10 @@
     }
 }
 
+.p-10 {
+    padding: 10px;
+}
+
 .teste {
     background: #f5d5fe;
     padding: 5px;
@@ -160,18 +164,80 @@ nav ul li a:hover {
     color: #E1F5C4;
 }
 
+/* ----- MAIN -----*/
+
 main {
+    margin-top: 40px;
     background: white;
 }
 
+/* ----- CARDS -----*/
+
+.card-1 > button{
+    background: #F9D423;
+    color: #E1F5C4;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 35%;
+}
+
+.card-1 h3{
+    font-size: 1.6em;
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.card-1 p{
+    font-size: 1em;
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.card-1 img {
+    border-radius: 100%;
+    max-width: 100%;
+}
+
+/* ----- FOOTER -----*/
 
 footer {
     background: #333;
     text-align: center;
     padding: 50px 0;
+    margin-top: 20px;
 }
 
 footer>p {
     margin-top: 20px;
     font-size: 0.6em;
+}
+
+
+/* MEDIA QUERY */
+
+@media (min-width: 480px) {
+    .card-1 {
+        width: 50%;
+    }
+}
+
+/* tres colunas */
+@media (min-width: 728px) {
+    .card-1 {
+        width: 50%;
+    }
+    
+
+/* sidebar */
+@media (min-width: 992px) {
+    .card-1 {
+        width: 100%;
+    }
+    .card-1 img {
+        max-width: 100%;
+    }
 }
