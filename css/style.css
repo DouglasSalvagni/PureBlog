@@ -156,11 +156,14 @@ nav {
     width: 100%;
     height: calc(100% - 58px);
     overflow: hidden;
-    left: -100vh;
+    left: -120vh;
     display: block;
     background: #E1F5C4;
     text-align: center;
-    transition: 0.4s;
+    -webkit-transition: 0.4s;
+       -moz-transition: 0.4s;
+         -o-transition: 0.4s;
+            transition: 0.4s;
 }
 
 .mobileSideBarIsOpen {
