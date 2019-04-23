@@ -314,7 +314,6 @@ nav {
     position: absolute;
     width: 100%;
     height: calc(100% - 58px);
-    overflow: hidden;
     left: -120vh;
     display: block;
     background: #E1F5C4;
@@ -330,6 +329,7 @@ nav {
 }
 
 nav ul{
+    display: block;
 }
 
 nav>ul>li {
@@ -354,6 +354,50 @@ nav>ul>li>a:hover {
     color: #E1F5C4;
 }
 
+.searchWrap {
+    display: block;
+}
+
+.searchWrap i {
+    color: #333;
+    margin-top: 20px;
+}
+
+.searchWrap form::before {
+    position: absolute;
+    top: -9px;
+    right: 15px;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5.5px 6px;
+    border-color: transparent transparent #333 transparent;
+}
+.searchWrap form {
+    background: white;
+    position: absolute;
+    border-top: solid 3px #333;
+    padding: 20px 10px;
+    margin-top: 10px;
+    margin-left: -178px;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.34);
+       -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.34);
+            box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.34);
+}
+.searchWrap button, .searchWrap input {
+    margin: 0 -5px 0 0;
+    padding: 5px;
+}
+
+.searchWrap button {
+    background: #333;
+    color: white;
+    border: solid #333;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 /* ----- MAIN -----*/
 
 main {
@@ -418,6 +462,9 @@ main {
         top: 0;
         left: 0;
     }
+    nav ul{
+        display: inline-block;
+    }
     nav>ul>li {
         display: inline-block;
     }
@@ -428,6 +475,14 @@ main {
     nav>ul>li>a::before {
         content: '';
         margin-left: 5px;
+    }
+    .searchWrap {
+        display: inline-block;
+    }
+    .searchWrap i {
+        color: #333;
+        margin-top: 10px;
+        margin-left: 50px;
     }
     .menuTop ul li a{
         display: inline-block;
