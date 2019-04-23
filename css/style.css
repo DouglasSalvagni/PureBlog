@@ -8,6 +8,7 @@
     text-decoration: none;
     list-style: none;
     color: #E1F5C4;
+    
 }
 
 body {
@@ -375,28 +376,49 @@ nav>ul>li>a:hover {
     border-width: 0 5.5px 6px;
     border-color: transparent transparent #333 transparent;
 }
-.searchWrap form {
+.search {
+    visibility: hidden;
+    opacity: 0;
+    top: 140%;
     background: white;
     position: absolute;
     border-top: solid 3px #333;
-    padding: 20px 10px;
-    margin-top: 10px;
-    margin-left: -178px;
+    padding: 20px 20px;
+    margin-left: -198px;
     -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.34);
        -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.34);
             box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.34);
+    -webkit-transition: 0.4s;
+       -moz-transition: 0.4s;
+         -o-transition: 0.4s;
+            transition: 0.4s;
 }
+
+.searchWrapIsOpen {
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+}
+
 .searchWrap button, .searchWrap input {
     margin: 0 -5px 0 0;
-    padding: 5px;
+}
+
+.searchWrap input {
+    padding: 6px 5px 6px 5px;
+    color: #333;
+    outline: none;
 }
 
 .searchWrap button {
     background: #333;
     color: white;
+    padding: 5px;
     border: solid #333;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    cursor: pointer;
+    outline: none;
 }
 /* ----- MAIN -----*/
 
