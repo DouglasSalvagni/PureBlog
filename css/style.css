@@ -8,6 +8,9 @@
     text-decoration: none;
     list-style: none;
     color: #E1F5C4;
+}
+
+body {
     font-family: 'Rubik', sans-serif;
 }
 
@@ -74,22 +77,23 @@
 @media (min-width: 992px) {
     .col-content {
        width: 70%;
-       padding-left: 20px;
+       padding-left: 40px;
+       padding-right: 40px;
     }
 
     .col-sidebar {
        width: 30%;
-       padding-right: 20px;
+       padding-left: 40px;
+       padding-right: 40px;
     }
 }
 
-.p-10 {
-    padding: 10px;
+.wrapper{
+
 }
 
-.wrapper {
+.wrap {
     margin-bottom: 90px;
-    padding-bottom: 50px;
 }
 
 .title-1 {
@@ -105,8 +109,6 @@
     display: inline-block;
 }
 
-/*--------*/
-
 .left {
     float: left;}
 
@@ -114,8 +116,26 @@
     float: right;}
 
 
-/* ----- CARDS -----*/
+    
+/* INSTAGRAM FEED*/
 
+.instagramF {
+    display: none;
+    margin: 0px 2px;
+}
+
+.instagramF img {
+    width: 30%;
+}
+.instagramF img:hover {
+    opacity: 0.7;
+    -webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+}
+
+/* ----- CARDS -----*/
 
 .card-1 h3{
     font-size: 1.6em;
@@ -152,14 +172,15 @@
 
 .card-2 {
     width: 100%;
-    border-bottom: solid 1px #999;
+    border-bottom: dashed 1px #999;
     margin-bottom: 90px;
+    border-bottom-width: 2px;
 }
 
-.card-2 h1, .card-2 h2, .card-2 h3, .card-2 h3>span, .card-2 p {
+.card-2 h1, .card-2 h2, .card-2 h3, .card-2 h3>span, .card-2 p,.card-2 img, .card-2 .readMore {
     text-align: center;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .card-2 h1{
@@ -173,8 +194,7 @@
 }
 
 .card-2 h3>span {
-    color: #999;
-    font-style: italic;
+    color: pink;
 }
 
 .card-2 p{
@@ -185,26 +205,29 @@
 
 .card-2 img{
     width: 100%;
-    margin-bottom: 20px;
     border-radius: 5px;
 }
 
 .readMore {
-    display: inline-block;
-    padding: 10px;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-top: 10px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    text-align: center;
-    
-    /* outline: none; */
 }
 
 .readMore a {
-    color: #333;
+    color: white;
+    width: auto;
     text-align: center;
-    display: inline-block;
+    background: #333;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.readMore a::after {
+    content: '>';
+    margin-left: 10px;
 }
 
 
@@ -225,7 +248,10 @@ footer>p {
 /* ---------*/
 
 header {
-    background: #F9D423;
+    background-image: url("../img/header-background.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #F9D423;
 }
 
 header .logo a{
@@ -301,21 +327,26 @@ nav {
     left: 0;
 }
 
+nav ul{
+}
 
 nav>ul>li {
     display: block;
+    margin-right: -4px;
 }
 
 nav>ul>li>a {
     width: 100%;
-    display: inline-block;
+    display: block;
     color: #333;
     font-weight: bold;
     letter-spacing: 4px;
-    padding: 20px 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-bottom: solid 1px white;
 }
 
+nav>ul>li>a.active,
 nav>ul>li>a:hover {
     background: #333; 
     color: #E1F5C4;
@@ -340,9 +371,26 @@ main {
         font-size: 1em;
         line-height: 20px;
     }
+    .instagramF {
+        display: inline;
+        margin: 0px 2px;
+    }
+    
+    .instagramF img {
+        width: 32%;
+    }
+    
 }
 
 @media (min-width: 728px) {
+    .instagramF {
+        display: inline;
+        margin: 0px 2px;
+    }
+    
+    .instagramF img {
+        width: 16%;
+    }
     .menuTop {
         display: block;
         top:0;
@@ -364,7 +412,8 @@ main {
                 transition: 0.4s;
     }
     nav {
-        position: relative;
+        position: sticky;
+        top: 0;
         left: 0;
     }
     nav>ul>li {
@@ -374,6 +423,10 @@ main {
         padding: 10px 10px;
         border-bottom: none;
     }
+    nav>ul>li>a::before {
+        content: '';
+        margin-left: 5px;
+    }
     .menuTop ul li a{
         display: inline-block;
         font-size: 0.6em;
@@ -381,6 +434,9 @@ main {
         margin: 5px;
         letter-spacing: 1px;
         text-transform: uppercase;
+    }
+    .menuTop ul li a i{
+        font-size: 3.5em;
     }
     .menuTop ul li a:hover {
         color: white;
@@ -399,6 +455,14 @@ main {
     
 
 @media (min-width: 992px) {
+    .instagramF {
+        display: inline;
+        margin: 0px 2px;
+    }
+    
+    .instagramF img {
+        width: 31%;
+    }
     .card-1 {
         width: 100%;
     }
