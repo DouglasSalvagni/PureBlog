@@ -140,6 +140,9 @@ body {
 /*----- HEADER----*/
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 121;
     background-image: url("../img/header-background.png");
     background-repeat: no-repeat;
     background-position: right;
@@ -193,6 +196,9 @@ header .logo a span{
 .topContent {
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.navHolder {
 }
 
 .topContent i {
@@ -311,9 +317,29 @@ nav>ul>li>a:hover {
     outline: none;
 }
 
+/*----- MOBILE SIDEBAR ----*/
+
+.mobileSidebar {
+    position: fixed;
+    width: 260px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 121;
+    -webkit-transform: translateX(-260px);
+            transform: translateX(-260px);
+    -webkit-transition: 0.3s cubic-bezier(0.16, 0.36, 0, 0.98);
+            transition: 0.3s cubic-bezier(0.16, 0.36, 0, 0.98);}
+    .mobileSidebar--open {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+
+    }
+
 /*----- OPEN MOBILE NAV----*/
 
-.content-overlay {
+.contentOverlay {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -323,11 +349,22 @@ nav>ul>li>a:hover {
 	visibility: hidden;
 	opacity: 0;
 	-webkit-transition: 0.3s cubic-bezier(0.16, 0.36, 0, 0.98);
-	transition: 0.3s cubic-bezier(0.16, 0.36, 0, 0.98);
+	        transition: 0.3s cubic-bezier(0.16, 0.36, 0, 0.98);
 	background-color: rgba(0, 0, 0, 0.8); }
-	.content-overlay--is-visible {
+	.contentOverlay--isVisible {
 		opacity: 1;
-		visibility: visible; }
+        visibility: visible;}
+
+.open {
+    -webkit-transform: translateX(260px);
+            transform: translateX(260px);
+	-webkit-transition: 0.3s cubic-bezier(0.16, 0.36, 0, 0.98);
+	        transition: 0.3s cubic-bezier(0.16, 0.36, 0, 0.98);
+}
+
+.hidden {
+    overflow: hidden;
+}
 
 
 /* ----- MAIN -----*/
@@ -335,6 +372,10 @@ nav>ul>li>a:hover {
 main {
     margin-top: 80px;
     background: white;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+	-webkit-transition: 0.3s cubic-bezier(0.16, 0.36, 0, 0.98);
+	        transition: 0.3s cubic-bezier(0.16, 0.36, 0, 0.98);
 }
 
 /* ----- CARDS -----*/
@@ -441,6 +482,10 @@ footer {
     text-align: center;
     padding: 50px 0;
     margin-top: 20px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+	-webkit-transition: 0.3s cubic-bezier(0.16, 0.36, 0, 0.98);
+	        transition: 0.3s cubic-bezier(0.16, 0.36, 0, 0.98);
 }
 
 footer>p {
@@ -487,6 +532,9 @@ footer>p {
     .topContent i {
         display: none;
     }
+    header {
+        position: relative;
+    }
     header .logo a{
         color: #E1F5C4;
         font-size: 2em;
@@ -503,6 +551,7 @@ footer>p {
     nav {
         position: sticky;
         display: block;
+        z-index: 121;
         top: 0;
         left: 0;
     }

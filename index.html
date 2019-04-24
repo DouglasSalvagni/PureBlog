@@ -11,32 +11,31 @@
     <title>Blog</title>
 </head>
 <body>
-    <div class="content-overlay"></div>
     <header>
-
-        <div class="menuTop">
-            <ul class="left">
-                <li><a href="#">Temperatura</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">April, 18/2019</a></li>
-                <li><a href="#">About me</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="right">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Instagram</a></li>
-            </ul>
+        <div class="navHolder">
+            <div class="menuTop">
+                <ul class="left">
+                    <li><a href="#">Temperatura</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">April, 18/2019</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="right">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+    
+            
+            <div class="container topContent">
+                <i id="openMobileMenu" class="fas fa-bars right"></i>
+                <h1 class="logo">
+                    <a href="#">Blog<span>Logo</span></a>
+                </h1>
+            </div>
         </div>
-
-        
-        <div class="container topContent">
-            <i id="openMobileMenu" class="fas fa-bars right"></i>
-            <h1 class="logo">
-                <a href="#">Blog<span>Logo</span></a>
-            </h1>
-        </div>
-
         
     </header>
     <nav>
@@ -55,7 +54,23 @@
             </form>
         </div>
     </nav>
-    
+    <nav class="mobileSidebar">
+        <div class="searchWrap">
+            <i id="OpenSearch" class="fas fa-search"></i>
+            <form id="search" action="" class="search">
+                <input type="text">
+                <button>Search</button>
+            </form>
+        </div>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Healthy</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Fashion</a></li>
+        </ul>
+    </nav>
+    <div class="contentOverlay"></div>
     <main class="container">
 
         <div class="row">
