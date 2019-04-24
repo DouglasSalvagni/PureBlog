@@ -335,7 +335,6 @@ nav ul{
 
 nav>ul>li {
     display: block;
-    margin-right: -4px;
 }
 
 nav>ul>li>a {
@@ -481,6 +480,7 @@ main {
     }
     nav {
         position: sticky;
+        display: block;
         top: 0;
         left: 0;
     }
