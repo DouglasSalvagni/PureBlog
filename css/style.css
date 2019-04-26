@@ -90,12 +90,12 @@ body {
     }
 }
 
-.wrapper{
+.wrapper {
 
 }
-
 .wrap {
-    margin-bottom: 70px;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
 }
 
 .title-1 {
@@ -111,6 +111,24 @@ body {
     display: inline-block;
 }
 
+.borderDashed {
+    border-bottom: dashed 1px #999;
+    border-bottom-width: 2px;
+}
+
+.patternSearch {
+    position: relative;
+    width: 100%;
+}
+.patternSearch input, .patternSearch button {
+    height: 40px;
+}
+.patternSearch input {
+    width: calc(100% - 56px)
+}
+.patternSearch button {
+    position: absolute;
+}
 .left {
     float: left;}
 
@@ -120,6 +138,10 @@ body {
 
     
 /* INSTAGRAM FEED*/
+
+.instaWrap {
+    display: none;
+}
 
 .instagramF {
     display: none;
@@ -247,17 +269,17 @@ nav>ul>li>a:hover {
     color: #E1F5C4;
 }
 
-.searchWrap {
+.searchNavWrap {
     display: inline-block;
 }
 
-.searchWrap i {
+.searchNavWrap i {
     color: #333;
     margin-top: 10px;
     margin-left: 50px;
 }
 
-.searchWrap form::before {
+.searchNavWrap form::before {
     position: absolute;
     top: -9px;
     right: 15px;
@@ -277,7 +299,7 @@ nav>ul>li>a:hover {
     position: absolute;
     border-top: solid 3px #333;
     padding: 20px 20px;
-    margin-left: -198px;
+    margin-left: -195px;
     -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.34);
        -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.34);
             box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.34);
@@ -287,27 +309,29 @@ nav>ul>li>a:hover {
             transition: 0.4s;
 }
 
-.searchWrapIsOpen {
+.searchNavWrapIsOpen {
     visibility: visible;
     opacity: 1;
     top: 100%;
 }
 
-.searchWrap button, .searchWrap input {
+.searchNavWrap button, .searchNavWrap input {
     margin: 0 -5px 0 0;
 }
 
-.searchWrap input {
+.searchNavWrap input {
     padding: 6px 5px 6px 5px;
     color: #333;
     outline: none;
+    border: solid 1px #999;
+    background: #ddd;
 }
 
-.searchWrap button {
+.searchNavWrap button {
     background: #333;
     color: white;
     padding: 5px;
-    border: solid #333;
+    border: solid 2px #333;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     cursor: pointer;
@@ -469,6 +493,19 @@ main {
     border-radius: 5px;
 }
 
+.card-block h2, p{
+    margin-bottom: 40px;
+}
+.card-block h2{
+    color: #333;
+    font-size: 3em;
+}
+.card-block p{
+    color: #333;
+    font-size: 1.2em;
+    line-height: 27px;
+}
+
 .readMore {
     display: flex;
     flex-direction: row;
@@ -533,6 +570,12 @@ footer>p {
 }
 
 @media (min-width: 728px) {
+    .borderDashed {
+        border-bottom: none;
+    }
+    .instaWrap {
+        display: block;
+    }
     .instagramF {
         display: inline;
         margin: 0px 2px;

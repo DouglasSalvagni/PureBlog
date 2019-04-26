@@ -34,10 +34,9 @@ setInterval(()=>{
 
 // OPEN SEARCH NAV HEADER
 
-document.querySelector('#OpenSearch').onclick = function() {
-    document.querySelector('#search').classList.toggle('searchWrapIsOpen')
+document.querySelector('#openSearch').onclick = function() {
+    document.querySelector('#search').classList.toggle('searchNavWrapIsOpen')
 }
 
-// TOGGLE IN MIN-WIDTH 728PX
 
 
