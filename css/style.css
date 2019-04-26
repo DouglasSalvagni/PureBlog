@@ -209,42 +209,38 @@ header .logo a span{
 /*----- NAVIGATION----*/
 
 nav {
-    position: absolute;
-    width: 100%;
-    height: calc(100% - 58px);
-    left: -120vh;
+    position: relative;
     display: block;
+    width: 100%;
     background: #E1F5C4;
     text-align: center;
-    -webkit-transition: 0.4s;
-       -moz-transition: 0.4s;
-         -o-transition: 0.4s;
-            transition: 0.4s;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+       -moz-transition: all 0.4s ease-in-out;
+         -o-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
 }
-
-.mobileSideBarIsOpen {
-    left: 0;
-}
-
 nav ul{
-    display: block;
+    display: inline-block;
 }
-
 nav>ul>li {
-    display: block;
+    display: inline-block;
+    margin-right: -4px;
 }
-
 nav>ul>li>a {
     width: 100%;
     display: block;
     color: #333;
     font-weight: bold;
     letter-spacing: 4px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: solid 1px white;
+    padding: 10px 10px;
 }
-
+nav>ul>li>a::before {
+    content: '';
+    margin-left: 5px;
+}
 nav>ul>li>a.active,
 nav>ul>li>a:hover {
     background: #333; 
@@ -252,12 +248,13 @@ nav>ul>li>a:hover {
 }
 
 .searchWrap {
-    display: block;
+    display: inline-block;
 }
 
 .searchWrap i {
     color: #333;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-left: 50px;
 }
 
 .searchWrap form::before {
@@ -327,6 +324,7 @@ nav>ul>li>a:hover {
     bottom: 0;
     left: 0;
     z-index: 121;
+    background: #E1F5C4;
     -webkit-transform: translateX(-260px);
             transform: translateX(-260px);
     -webkit-transition: 0.3s cubic-bezier(0.16, 0.36, 0, 0.98);
@@ -336,6 +334,24 @@ nav>ul>li>a:hover {
                 transform: translateX(0);
 
     }
+
+.mobileSidebar ul, .mobileSidebar ul li {
+}
+
+.mobileSidebar ul li a{
+    display: block;
+    color: #333;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+.mobileSidebar ul li a.active,
+.mobileSidebar ul li a:hover{
+    background: #333;
+    color: white;
+}
 
 /*----- OPEN MOBILE NAV----*/
 
@@ -549,34 +565,9 @@ footer>p {
                 transition: 0.4s;
     }
     nav {
-        position: sticky;
-        display: block;
-        z-index: 121;
-        top: 0;
-        left: 0;
-    }
-    nav ul{
-        display: inline-block;
-    }
-    nav>ul>li {
-        display: inline-block;
-        margin-right: -4px;
-    }
-    nav>ul>li>a {
-        padding: 10px 10px;
-        border-bottom: none;
-    }
-    nav>ul>li>a::before {
-        content: '';
-        margin-left: 5px;
-    }
-    .searchWrap {
-        display: inline-block;
-    }
-    .searchWrap i {
-        color: #333;
-        margin-top: 10px;
-        margin-left: 50px;
+        height: initial;
+        opacity: 1;
+        overflow: initial;
     }
     .menuTop ul li a{
         display: inline-block;

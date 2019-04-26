@@ -37,3 +37,7 @@ setInterval(()=>{
 document.querySelector('#OpenSearch').onclick = function() {
     document.querySelector('#search').classList.toggle('searchWrapIsOpen')
 }
+
+// TOGGLE IN MIN-WIDTH 728PX
+
+
