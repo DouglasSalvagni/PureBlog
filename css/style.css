@@ -16,16 +16,16 @@ body {
 }
 
 ::placeholder {
-    color: #FFF;
+    color: rgb(255, 146, 132);
     opacity: 1; /* Firefox */
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: #FFF;
+   color: rgb(255, 146, 132);
   }
   
   ::-ms-input-placeholder { /* Microsoft Edge */
-   color: #FFF;
+   color: rgb(255, 146, 132);
 }
 
 /* PATTERN */
@@ -362,7 +362,7 @@ nav>ul>li>a:hover {
 }
 
 .searchNavWrap input {
-    padding: 6px 5px 6px 5px;
+    padding: 6px 10px 6px 10px;
     color: #FFF;
     outline: none;
     border: solid 1px #FF442B;
