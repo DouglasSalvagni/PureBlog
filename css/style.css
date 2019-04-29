@@ -336,12 +336,12 @@ nav>ul>li>a:hover {
 .search {
     visibility: hidden;
     opacity: 0;
-    top: 140%;
+    top: 180%;
     background: white;
     position: absolute;
     border-top: solid 3px #88A9BF;
     padding: 20px 20px;
-    margin-left: -195px;
+    margin-left: -205px;
     -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.34);
        -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.34);
             box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.34);
@@ -354,7 +354,7 @@ nav>ul>li>a:hover {
 .searchNavWrapIsOpen {
     visibility: visible;
     opacity: 1;
-    top: 100%;
+    top: 120%;
 }
 
 .searchNavWrap button, .searchNavWrap input {
