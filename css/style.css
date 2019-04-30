@@ -97,20 +97,12 @@ body {
 /* duas colonas */
 @media (min-width: 480px) {
     .col-2 {
-        width: 100%;
+        width: 50%;
     }
 }
 
 /* tres colunas */
 @media (min-width: 728px) {
-    .col-3 {
-        width: 33.3333%;
-    }
-}
-@media (min-width: 728px) {
-    .col-2 {
-        width: 50%;
-    }
     .col-3 {
         width: 33.3333%;
     }
@@ -327,6 +319,10 @@ nav>ul>li>a.active,
 nav>ul>li>a:hover {
     background: #FF442B; 
     color: #FFF;
+    -webkit-transition: all 0.4s ease-in-out;
+       -moz-transition: all 0.4s ease-in-out;
+         -o-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
 }
 
 .searchNavWrap {
@@ -482,21 +478,24 @@ main {
 
 .articleWrap {
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
     width: 100%;
+    background: #FF442B;
+    overflow: hidden;
 }
 
 .articleImage {
     background: #333;
     background-size: cover;
-    height: 200px;
+    height: 190px;
 }
 
 .articleImage .articleLink {
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 20px;
+    margin: 20px;
 }
 .articleImage a {
     color: white;
