@@ -328,6 +328,7 @@ nav>ul>li:hover>ul {
 nav>ul>li>ul>li:hover ul {
     display: block;
 }
+
 /* dropdown menu*/
 
 nav>ul>li>ul {
@@ -335,6 +336,7 @@ nav>ul>li>ul {
     position: absolute;
     background: #FF442B;
     width: 200px;
+    box-shadow: 0 8px 6px -6px #333;
 }
 nav>ul>li>ul>li {
     display: block;
@@ -345,17 +347,18 @@ nav>ul>li>ul>li>a{
     padding: 10px;
     color: #FFF;
 }
-nav>ul>li>ul>li>a:hover{
+nav>ul>li>ul>li:hover{
     background: #333;
 }
-/*--*/
+/*-sub-menu-*/
 nav>ul>li>ul>li>ul {
     display: none;
     position: absolute;
     left: 200px;
-    margin-top: -40px;
-    background: #FF442B;
+    margin-top: -39px;
+    background: #333;
     width: 200px;
+    box-shadow: 0 8px 6px -6px #333;
 }
 nav>ul>li>ul>li>ul>li {
     display: block;
@@ -366,8 +369,8 @@ nav>ul>li>ul>li>ul>li>a{
     padding: 10px;
     color: #FFF;
 }
-nav>ul>li>ul>li>ul>li>a:hover{
-    background: #333;
+nav>ul>li>ul>li>ul>li:hover{
+    background: #444;
 }
 
 .searchNavWrap {
@@ -526,14 +529,36 @@ main {
     padding-bottom: 5px;
     margin-bottom: 10px;
     width: 100%;
-    background: #FF442B;
     overflow: hidden;
 }
 
+.articleWrap:hover .articleImage {
+    background-position-y: -10px;
+    -webkit-transition: all 0.4s ease-in-out;
+       -moz-transition: all 0.4s ease-in-out;
+         -o-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+}
+.articleWrap:hover .articleImage::after {
+}
 .articleImage {
     background: #333;
     background-size: cover;
     height: 190px;
+    -webkit-transition: all 0.4s ease-in-out;
+       -moz-transition: all 0.4s ease-in-out;
+         -o-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+}
+
+.articleImage::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background: #FF442B;
 }
 
 .articleImage .articleLink {
