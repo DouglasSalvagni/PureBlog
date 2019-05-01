@@ -301,28 +301,73 @@ nav ul{
 }
 nav>ul>li {
     display: inline-block;
+    position: relative;
     margin-right: -4px;
 }
 nav>ul>li>a {
     width: 100%;
+    position: relative;
     display: block;
     color: #FFF;
     font-weight: bold;
     letter-spacing: 4px;
-    padding: 10px 10px;
+    padding: 10px 10px 10px 15px;
 }
-nav>ul>li>a::before {
-    content: '';
-    margin-left: 5px;
-}
-nav>ul>li>a.active,
-nav>ul>li>a:hover {
+nav>ul>li.active,
+nav>ul>li:hover {
     background: #FF442B; 
     color: #FFF;
     -webkit-transition: all 0.4s ease-in-out;
        -moz-transition: all 0.4s ease-in-out;
          -o-transition: all 0.4s ease-in-out;
             transition: all 0.4s ease-in-out;
+}
+nav>ul>li:hover>ul {
+    display: block;
+}
+nav>ul>li>ul>li:hover ul {
+    display: block;
+}
+/* dropdown menu*/
+
+nav>ul>li>ul {
+    display: none;
+    position: absolute;
+    background: #FF442B;
+    width: 200px;
+}
+nav>ul>li>ul>li {
+    display: block;
+    text-align: left;
+}
+nav>ul>li>ul>li>a{
+    display: block;
+    padding: 10px;
+    color: #FFF;
+}
+nav>ul>li>ul>li>a:hover{
+    background: #333;
+}
+/*--*/
+nav>ul>li>ul>li>ul {
+    display: none;
+    position: absolute;
+    left: 200px;
+    margin-top: -40px;
+    background: #FF442B;
+    width: 200px;
+}
+nav>ul>li>ul>li>ul>li {
+    display: block;
+    text-align: left;
+}
+nav>ul>li>ul>li>ul>li>a{
+    display: block;
+    padding: 10px;
+    color: #FFF;
+}
+nav>ul>li>ul>li>ul>li>a:hover{
+    background: #333;
 }
 
 .searchNavWrap {
