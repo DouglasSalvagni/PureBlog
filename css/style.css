@@ -330,7 +330,6 @@ nav>ul>li>ul>li:hover ul {
 
 nav>ul>li>ul {
     display: block;
-    overflow: hidden;
     position: absolute;
     background: #FF442B;
     width: 200px;
@@ -339,7 +338,6 @@ nav>ul>li>ul {
 }
 nav>ul>li:hover>ul {
     max-height: 100vw;
-    overflow: visible;
     -webkit-transition: all 0.8s ease-in-out;
        -moz-transition: all 0.8s ease-in-out;
          -o-transition: all 0.8s ease-in-out;
@@ -484,10 +482,6 @@ nav>ul>li>ul>li>ul>li:hover{
                 transform: translateX(0);
 
     }
-
-.mobileSidebar ul, .mobileSidebar ul li {
-}
-
 .mobileSidebar ul li a{
     display: block;
     color: #333;
@@ -496,11 +490,43 @@ nav>ul>li>ul>li>ul>li:hover{
     padding-bottom: 15px;
     font-weight: bold;
     letter-spacing: 4px;
+    width: 100%;
 }
 .mobileSidebar ul li a.active,
 .mobileSidebar ul li a:hover{
     background: #333;
     color: white;
+}
+.mobileSidebar ul>li>ul {
+    background: #FF442B;
+    overflow: hidden;
+    max-height: 0;
+}
+.mobileSidebar ul>li:hover>ul {
+    max-height: 100em;
+    -webkit-transition: all 0.8s ease-in-out;
+       -moz-transition: all 0.8s ease-in-out;
+         -o-transition: all 0.8s ease-in-out;
+            transition: all 0.8s ease-in-out;
+}
+
+.mobileSidebar ul>li>ul>li>ul {
+    background: rgb(255, 93, 72);
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: all 0.8s ease-in-out;
+       -moz-transition: all 0.8s ease-in-out;
+         -o-transition: all 0.8s ease-in-out;
+            transition: all 0.8s ease-in-out;
+    
+}
+.mobileSidebar ul>li>ul>li:hover>ul {
+    overflow: hidden;
+    max-height: 100vh;
+    -webkit-transition: all 0.8s ease-in-out;
+       -moz-transition: all 0.8s ease-in-out;
+         -o-transition: all 0.8s ease-in-out;
+            transition: all 0.8s ease-in-out;
 }
 
 /*----- OPEN MOBILE NAV----*/
