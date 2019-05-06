@@ -6,7 +6,7 @@ document.querySelector('#openMobileMenu').onclick = ()=> {
     document.querySelector('.searchWrap').classList.toggle('searchWrap--open')
     document.querySelector('main').classList.toggle('open')
     document.querySelector('footer').classList.toggle('open')
-    document.querySelector('body').classList.toggle('hidden')
+    document.querySelector('html').classList.toggle('hidden')
 }
 
 // CLOSE MOBILE MENU ---
