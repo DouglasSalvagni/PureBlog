@@ -12,20 +12,20 @@
 
 body {
     font-family: 'Rubik', sans-serif;
-    color: #88A9BF;
+    color: #37323E;
 }
 
 ::placeholder {
-    color: rgb(255, 146, 132);
+    color: #FCCE56;
     opacity: 1; /* Firefox */
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: rgb(255, 146, 132);
+   color: #FCCE56;
   }
   
   ::-ms-input-placeholder { /* Microsoft Edge */
-   color: rgb(255, 146, 132);
+   color: #FCCE56;
 }
 
 /* PATTERN */
@@ -104,7 +104,7 @@ body {
 /* tres colunas */
 @media (min-width: 728px) {
     .col-3 {
-        width: 33.3333%;
+        width: 33.37323E3%;
     }
     .col-4 {
         width: 25%;
@@ -136,12 +136,12 @@ body {
 }
 
 .title-1 {
-    border-bottom: solid 2px #88A9BF;
+    border-bottom: solid 2px #37323E;
     margin-bottom: 20px;
 }
 
 .title-1 span{
-    background: #88A9BF;
+    background: #37323E;
     padding: 7px 12px 4px;
     color: white;
     text-transform: uppercase;
@@ -155,7 +155,7 @@ body {
 }
 
 .borderDashed {
-    border-bottom: dashed 1px #88A9BF;
+    border-bottom: dashed 1px #37323E;
     border-bottom-width: 2px;
 }
 
@@ -179,7 +179,7 @@ body {
 }
 .socialMediaItem a{
     font-size: 1.8em;
-    color: #88A9BF;
+    color: #37323E;
 }
 .left {
     float: left;}
@@ -219,7 +219,8 @@ header {
     z-index: 121;
     background-image: url("../img/header-background.png");
     background-repeat: no-repeat;
-    background-position: right;
+    background-size: 3em;
+    background-position: right 15% bottom;
     background-color: #FCCE56;
 }
 
@@ -233,7 +234,7 @@ header .logo a{
 }
 
 header .logo a span{
-    color: #FF442B;}
+    color: #DE9E36;}
 
 .menuTop {
     position: absolute;
@@ -260,7 +261,7 @@ header .logo a span{
 }
 
 .menuTop ul li a:hover {
-    color: #88A9BF;
+    color: #37323E;
     -webkit-transition: all 0.2s ease-in-out;
        -moz-transition: all 0.2s ease-in-out;
          -o-transition: all 0.2s ease-in-out;
@@ -286,7 +287,7 @@ nav {
     position: relative;
     display: block;
     width: 100%;
-    background: #88A9BF;
+    background: #37323E;
     text-align: center;
     overflow: hidden;
     height: 0;
@@ -315,7 +316,7 @@ nav>ul>li>a {
 }
 nav>ul>li>a.active,
 nav>ul>li:hover {
-    background: #FF442B; 
+    background: #DE9E36; 
     color: #FFF;
     -webkit-transition: all 0.4s ease-in-out;
        -moz-transition: all 0.4s ease-in-out;
@@ -331,24 +332,21 @@ nav>ul>li>ul>li:hover ul {
 nav>ul>li>ul {
     display: block;
     position: absolute;
-    background: #FF442B;
+    background: #DE9E36;
+    visibility: hidden;
+    opacity: 0;
     width: 200px;
-    box-shadow: 0 8px 6px -6px #333;
-    max-height: 0;
+    box-shadow: 0 8px 6px -6px #37323E;
 }
 nav>ul>li:hover>ul {
-    max-height: 100vw;
-    -webkit-transition: all 0.8s ease-in-out;
-       -moz-transition: all 0.8s ease-in-out;
-         -o-transition: all 0.8s ease-in-out;
-            transition: all 0.8s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
 }
 nav>ul>li:hover>ul>li>a {
-    max-height: 50px;
-    -webkit-transition: max-height 0.4s ease-in-out;
-       -moz-transition: max-height 0.4s ease-in-out;
-         -o-transition: max-height 0.4s ease-in-out;
-            transition: max-height 0.4s ease-in-out;
 }
 nav>ul>li>ul>li {
     display: block;
@@ -358,10 +356,9 @@ nav>ul>li>ul>li>a{
     display: block;
     padding: 10px;
     color: #FFF;
-    max-height: 0;
 }
 nav>ul>li>ul>li:hover{
-    background: #333;
+    background: #37323E;
 }
 
 /*-sub-menu-*/
@@ -370,9 +367,9 @@ nav>ul>li>ul>li>ul {
     overflow: hidden;
     left: 200px;
     margin-top: -39px;
-    background: #333;
+    background: #37323E;
     width: 0;
-    box-shadow: 0 8px 6px -6px #333;
+    box-shadow: 0 8px 6px -6px #37323E;
 }
 nav>ul>li>ul>li:hover>ul{
     width: 200px;
@@ -391,7 +388,7 @@ nav>ul>li>ul>li>ul>li>a{
     color: #FFF;
 }
 nav>ul>li>ul>li>ul>li:hover{
-    background: #444;
+    background: #6D6A75;
 }
 .searchNavWrap {
     display: inline-block;
@@ -413,7 +410,7 @@ nav>ul>li>ul>li>ul>li:hover{
     height: 0;
     border-style: solid;
     border-width: 0 5.5px 6px;
-    border-color: transparent transparent #88A9BF transparent;
+    border-color: transparent transparent #37323E transparent;
 }
 .search {
     visibility: hidden;
@@ -421,7 +418,7 @@ nav>ul>li>ul>li>ul>li:hover{
     top: 180%;
     background: white;
     position: absolute;
-    border-top: solid 3px #88A9BF;
+    border-top: solid 3px #37323E;
     padding: 20px 20px;
     margin-left: -205px;
     -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.34);
@@ -447,15 +444,15 @@ nav>ul>li>ul>li>ul>li:hover{
     padding: 6px 10px 6px 10px;
     color: #FFF;
     outline: none;
-    border: solid 1px #FF442B;
-    background: #FF442B;
+    border: solid 1px #DE9E36;
+    background: #DE9E36;
 }
 
 .searchNavWrap button {
-    background: #88A9BF;
+    background: #37323E;
     color: white;
     padding: 5px;
-    border: solid 2px #88A9BF;
+    border: solid 2px #37323E;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     cursor: pointer;
@@ -472,7 +469,7 @@ nav>ul>li>ul>li>ul>li:hover{
     bottom: 0;
     left: 0;
     z-index: 121;
-    background: #88A9BF;
+    background: #37323E;
     -webkit-transform: translateX(-260px);
             transform: translateX(-260px);
     -webkit-transition: 0.3s cubic-bezier(0.16, 0.36, 0, 0.98);
@@ -484,7 +481,7 @@ nav>ul>li>ul>li>ul>li:hover{
     }
 .mobileSidebar ul li a{
     display: block;
-    color: #333;
+    color: #fff;
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -492,41 +489,55 @@ nav>ul>li>ul>li>ul>li:hover{
     letter-spacing: 4px;
     width: 100%;
 }
-.mobileSidebar ul li a.active,
-.mobileSidebar ul li a:hover{
-    background: #333;
-    color: white;
+.mobileSidebar ul li a {
+    position: relative;
 }
-.mobileSidebar ul>li>ul {
-    background: #FF442B;
+.mobileSidebar>ul>li>a {
+    border-top: solid 1px #6D6A75;
+}
+.mobileSidebar>ul>li:last-child a {
+    border-bottom: solid 1px #6D6A75;
+}
+.mobileSidebar ul li i {
+    position: absolute;
+    padding: 10px;
+    right: 20px;
+    top: 5px;
+}
+.panel {
+    background: #fff;
     overflow: hidden;
     max-height: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+       -moz-transition: all 0.4s ease-in-out;
+         -o-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
 }
-.mobileSidebar ul>li:hover>ul {
-    max-height: 100em;
-    -webkit-transition: all 0.8s ease-in-out;
-       -moz-transition: all 0.8s ease-in-out;
-         -o-transition: all 0.8s ease-in-out;
-            transition: all 0.8s ease-in-out;
+.mobileSidebar ul>li>ul>li:hover {
+    background: #ccc;
 }
-
+.mobileSidebar ul>li>ul>li>a {
+    color: #37323E;
+}
 .mobileSidebar ul>li>ul>li>ul {
-    background: rgb(255, 93, 72);
-    overflow: hidden;
-    max-height: 0;
-    -webkit-transition: all 0.8s ease-in-out;
-       -moz-transition: all 0.8s ease-in-out;
-         -o-transition: all 0.8s ease-in-out;
-            transition: all 0.8s ease-in-out;
+    background: #ddd;
     
 }
-.mobileSidebar ul>li>ul>li:hover>ul {
-    overflow: hidden;
-    max-height: 100vh;
-    -webkit-transition: all 0.8s ease-in-out;
-       -moz-transition: all 0.8s ease-in-out;
-         -o-transition: all 0.8s ease-in-out;
-            transition: all 0.8s ease-in-out;
+
+/*-- accordion --*/
+
+.accordion {
+    -webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+}
+.rotate {
+    transform: rotate(180deg);
+}
+
+.panel-is-open {
+    max-height: 100em;
 }
 
 /*----- OPEN MOBILE NAV----*/
@@ -581,7 +592,7 @@ main {
 }
 
 .articleImage {
-    background: #333;
+    background: #37323E;
     background-size: cover;
     height: 190px;
     -webkit-transition: all 0.4s ease-in-out;
@@ -611,7 +622,7 @@ main {
     width: 100%;
     height: 100px;
     margin-bottom: 5px;
-    background: #FF442B;
+    background: #DE9E36;
     transform-origin: bottom;
     transform: scaleY(0);
     -webkit-transition: all 0.2s ease-in-out;
@@ -641,14 +652,14 @@ main {
 .card-1 h3{
     font-size: 1.2em;
     text-align: center;
-    color: #88A9BF;
+    color: #37323E;
 }
 
 .card-1 p{
     font-size: 1.2em;
     text-align: center;
     line-height: 30px;
-    color: #88A9BF;
+    color: #37323E;
 }
 
 .card-1 img {
@@ -665,7 +676,7 @@ main {
 }
 .card-1 button{
     width: fit-content;
-    background: #FF442B;
+    background: #DE9E36;
     color: #FFF;
     padding: 10px;
     border: none;
@@ -683,7 +694,7 @@ main {
 
 .card-2 h1, .card-2 h2, .card-2 h3, .card-2 h3>span, .card-2 p,.card-2 img, .card-2 .readMore {
     text-align: center;
-    color: #FF442B;
+    color: #DE9E36;
     margin-bottom: 40px;
 }
 
@@ -695,18 +706,18 @@ main {
 .card-2 h2 {
     text-transform: uppercase;
     text-decoration: underline;
-    color: #88A9BF;
+    color: #37323E;
 }
 
 .card-2 h3>span {
-    color: #88A9BF;
+    color: #37323E;
 }
 
 .card-2 p{
     font-size: 1em;
     letter-spacing: 2px;
     line-height: 27px;
-    color: #88A9BF;
+    color: #37323E;
 }
 
 .card-2 img{
@@ -748,7 +759,7 @@ main {
     border-radius: 50%;
     border: 2px solid #fff;
     padding: 4px;
-    background: #FF442B;
+    background: #DE9E36;
 }
 .card-postsWrap p {
     display: inline-block;
@@ -756,7 +767,7 @@ main {
     font-size: 0.7em;
     font-weight: bold;
     text-align: justify;
-    color: #88A9BF;
+    color: #37323E;
     
 }
 
@@ -765,11 +776,11 @@ main {
     text-align: justify;
 }
 .card-block h2{
-    color: #88A9BF;
+    color: #37323E;
     font-size: 3em;
 }
 .card-block p{
-    color: #88A9BF;
+    color: #37323E;
     font-size: 1.2em;
     line-height: 27px;
 }
@@ -785,7 +796,7 @@ main {
     color: white;
     width: auto;
     text-align: center;
-    background: #88A9BF;
+    background: #37323E;
     padding: 10px 14px;
     border-radius: 10px;
     cursor: pointer;
@@ -799,7 +810,7 @@ main {
 /* ----- FOOTER -----*/
 
 footer {
-    background: #333;
+    background: #37323E;
     text-align: center;
     padding: 50px 0;
     margin-top: 20px;
@@ -861,6 +872,8 @@ footer>p {
     }
     header {
         position: relative;
+        background-size: 10em;
+        background-position: right 10px bottom;
     }
     header .logo a{
         color: #FFF;
@@ -896,7 +909,7 @@ footer>p {
         font-size: 3.5em;
     }
     .menuTop ul li a:hover {
-        color: #88A9BF;
+        color: #37323E;
         -webkit-transition: all 0.2s ease-in-out;
            -moz-transition: all 0.2s ease-in-out;
              -o-transition: all 0.2s ease-in-out;

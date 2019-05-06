@@ -32,11 +32,23 @@ setInterval(()=>{
     }
 }, 100)
 
+//MOBILE MENU ---
+
+var accordion = document.querySelectorAll('.accordion')
+console.log(accordion)
+
+for (let i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener('click', function() {
+        this.classList.toggle('rotate')
+        let panel = this.parentElement.nextElementSibling
+        panel.classList.toggle('panel-is-open')
+        console.log(this.parentElement.nextElementSibling)
+    })
+}
+
+
 // OPEN SEARCH NAV HEADER
 
-document.querySelector('#openSearch').onclick = function() {
-    document.querySelector('#search').classList.toggle('searchNavWrapIsOpen')
-}
 
 
 
