@@ -35,7 +35,7 @@ setInterval(()=>{
     }
 }, 100)
 
-//MOBILE MENU ---
+// ACCORDION MOBILE MENU ---
 
 var accordion = document.querySelectorAll('.accordion')
 
