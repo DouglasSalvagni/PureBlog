@@ -499,7 +499,8 @@ nav>ul>li>ul>li>ul>li:hover{
 .searchWrap {
     box-shadow: -9px 1px 7px -6px #333;
     position: relative;
-    background: #DE9E36;
+    background: #fff;
+    border-right: #ccc solid 5px;
 }
 .searchWrap--open {
     box-shadow: 20px 1px 16px -6px #333;
@@ -517,23 +518,31 @@ nav>ul>li>ul>li>ul>li:hover{
 }
 .searchWrap input {
     display: block;
-    padding: 5px 10px 5px 10px;
+    padding: 10px 10px 10px 10px;
     text-align: center;
-    color: #FFF;
+    color: #333;
     outline: none;
-    border: solid 1px #DE9E36;
-    border-radius: 5px;
-    background: #333;
+    border: solid 1px #ccc;
+    background: #fff;
 }
+
+.searchWrap input::placeholder {
+    color: #ccc;
+    }
+    .searchWrap input::-moz-placeholder {
+    color: #ccc;
+    }
+    .searchWrap input::-webkit-input-placeholder {
+    color: #ccc;
+    }
 
 .searchWrap button {
     margin: 10px 10px;
-    padding: 5px;
+    padding: 8px 15px;
     display: block;
     background: #37323E;
     color: white;
-    border: solid 2px #37323E;
-    border-radius: 5px;
+    border: none;
     cursor: pointer;
     outline: none;
 }
