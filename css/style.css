@@ -874,6 +874,94 @@ main {
     margin-left: 10px;
 }
 
+/* ----- POST -----*/
+
+blockquote {
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+    blockquote p {
+        font-size: 1.6em;
+        line-height: 39px;
+    }
+
+    blockquote p::first-letter  {
+        font-size: 1.9em;
+        color: red;
+    }
+
+    .single-post {
+        width: 100%;
+        margin-bottom: 90px;
+    }
+
+.single-post figure, .single-post p, .single-post h2 {
+    margin-bottom: 30px;
+}
+
+.single-post img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.single-post figcaption {
+    color: #999;
+    font-size: 0.8em;
+}
+
+.single-post > p {
+    line-height: 28px;
+    margin-bottom: 50px;
+}
+
+.single-post-tags {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 24px 0;
+    border-bottom: 1px solid #e1e5e6;
+    border-top: 1px solid #e1e5e6;
+}
+    .single-post-tags a{
+        color: #49545E;
+        border-radius: 3px;
+        padding: 2px 5px;
+        margin-left: 5px;
+        font-size: 12px;
+        border: 1px solid #e1e5e6;
+    }
+
+.post-author {
+    margin: 20px 0;
+}
+
+.post-author-items {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px;
+}
+
+.post-author-items img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+.post-author-items h3 {
+    font-size: 0.8em;
+    line-height: 20px;
+    color: #999;
+    font-weight: 100;
+}
+.post-author-items h3 span {
+    font-weight: bold;
+    color: #333;
+}
+
 /* ----- FOOTER -----*/
 
 footer {
@@ -912,6 +1000,14 @@ footer p, footer h3 {
     
     .instagramF img {
         width: 32%;
+    }
+    .post-author-items img {
+        width: 40px;
+        height: 40px;
+    }
+    .post-author-items h3 {
+        font-size: 1em;
+        line-height: 40px;
     }
     
 }

@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <title>Blog</title>
+    <title>Douglas Salvagni</title>
 </head>
 <body>
     <header>
         <div class="navHolder">
-            <div class="menuTop">
+            <div class="menuTop clearfix">
                 <ul class="left">
                     <li><a href="#">Temperatura</a></li>
                     <li><a href="#">About</a></li>
@@ -32,7 +32,7 @@
             <div class="container topContent">
                 <i id="openMobileMenu" class="fas fa-bars right"></i>
                 <h1 class="logo">
-                    <a href="#">Blog<span>Logo</span></a>
+                    <a href="#">Logo<span>mark</span></a>
                 </h1>
             </div>
         </div>
@@ -40,11 +40,30 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="404.html">About</a></li>
-            <li><a href="#">Healthy</a></li>
-            <li><a href="#">Travel</a></li>
-            <li><a href="#">Fashion</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Posts</a>
+                <ul>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Categories</a>
+                        <ul>
+                            <li><a href="#">HTML5</a></li>
+                            <li><a href="#">CSS3</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vídeos</a></li>
+                    <li><a href="#">Images</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Pages</a>
+                <ul>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="404.html">404</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Shortcodes</a></li>
         </ul>
         <div class="searchNavWrap">
             <i id="openSearch" class="fas fa-search"></i>
@@ -56,18 +75,36 @@
     </nav>
     <div class="mobileSidebar">
         <div class="searchWrap">
-            <i class="fas fa-search"></i>
-            <form id="search" action="" class="search">
+            <form  action="" class="flexCenter">
                 <input type="text" placeholder="Search an article">
                 <button>Search</button>
             </form>
         </div>
         <ul>
             <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Healthy</a></li>
-            <li><a href="#">Travel</a></li>
-            <li><a href="#">Fashion</a></li>
+            <li><a href="#">Posts<i class="fas fa-angle-down accordion"></i></a>
+                <ul class="panel">
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#" >Categories<i class="fas fa-angle-down accordion"></i></a>
+                        <ul class="panel">
+                            <li><a href="#">HTML5</a></li>
+                            <li><a href="#">CSS3</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vídeos</a></li>
+                    <li><a href="#">Images</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Pages<i class="fas fa-angle-down accordion"></i></a>
+                <ul class="panel">
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">404</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Shortcodes</a></li>
         </ul>
     </div>
     <div class="contentOverlay"></div>
@@ -76,24 +113,44 @@
         <div class="row">
             <div class="col">
                 <div class="row wrapper">
-                    <div class="col card-2">
-                        <h2>Categorie</h2>
-                        <h1>Título - Amet consectetur adipisicing elit. Sapiente, sint?</h1>
-                        <h3>Writer - <span>20/04/2019</span></h3>
-                        <img class="card-img" src="https://source.unsplash.com/random/600x150">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laboriosam optio reiciendis dolorum eaque iure perferendis eos quos quibusdam animi, nihil amet voluptatem tempora ratione repellat adipisci. Voluptates sequi facilis amet praesentium similique, molestiae, reprehenderit ipsum consequuntur, enim labore deleniti.</p>
-                        <div class="readMore">
-                            <a href="#">Read more</a>
+                    <div class="col single-post">
+                        <h1>Amet consectetur adipisicing elit. Sapiente, sint?</h1>
+                        <div class="post-author">
+                            <div class="post-author-items">
+                                <img src="img/author.jpg" alt="">
+                            </div>
+                            <div class="post-author-items">
+                                <h3>by <span>Douglas Salvagni</span></h3>
+                            </div>
+                            <div class="post-author-items">
+                                <h3>13 abril, 2019</h3>
+                            </div>
+                            <div class="post-author-items">
+                                <h3>in <span>technology</span></h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col card-2">
-                        <h2>Categorie</h2>
-                        <h1>Lorem ipsum sapiente, sint?</h1>
-                        <h3>Writer - <span>20/04/2019</span></h3>
-                        <img class="card-img" src="https://source.unsplash.com/random/700x150">
-                        <p>Tenetur sed consequuntur ipsa consectetur eligendi, vitae incidunt labore quis quas enim in similique maxime debitis laboriosam necessitatibus. Quaerat cupiditate ipsa fugiat ratione accusantium, suscipit ad quisquam ab. Earum rerum dolorem aperiam maiores molestiae consectetur enim debitis. Minus fugiat recusandae sit id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum assumenda veritatis aspernatur voluptatibus illo omnis incidunt hic animi ducimus voluptates voluptatem accusantium, dolore ipsa optio? Facere placeat voluptatum natus officiis.</p>
-                        <div class="readMore">
-                            <a href="#">Read more</a>
+                        <figure>
+                            <img class="card-img" src="https://source.unsplash.com/random/1200x300">
+                            <figcaption>Photo taken by Lauro Rossi</figcaption>
+                        </figure>
+                        <p>Lorem ips um dolor sit amet consectetur adipisicing elit. Corrupti sed beatae accusantium ut repellat aut eveniet temporibus error mollitia ea, corporis dolor minima suscipit debitis sunt asperiores! Exercitationem cupiditate libero eius quo eos nobis dignissimos nesciunt repudiandae veniam molestiae laudantium minima, cum, ratione, sint quidem error nam suscipit corporis unde iure aspernatur ab architecto. Animi ipsam, tenetur facilis placeat ex itaque doloribus, sed necessitatibus in esse dolor aliquid, corporis omnis quibusdam. Quo quos voluptates aut dolorem aspernatur expedita minima impedit quaerat suscipit rerum. Quaerat dolore laborum minima officiis corrupti iste, saepe atque voluptatum illo vitae facere, ipsum mollitia recusandae cumque?</p>
+                        <blockquote>
+                            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, soluta. Officiis quae laborum pariatur aliquam dignissimos quam architecto ea consectetur."</p>
+                        </blockquote>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem voluptates dolorum, ratione magni vel sit aliquam quaerat quam illum. Ullam temporibus voluptas dolorem sint vitae hic nam numquam aliquid qui, in consequatur eaque, earum excepturi ducimus pariatur ut molestias non dolor, laudantium libero dolores ratione quidem iste adipisci? Esse corporis possimus facere a aliquid dolorum illo officia cupiditate iste. Explicabo.</p>
+                        <figure>
+                            <img class="card-img" src="https://source.unsplash.com/random/1100x450">
+                            <figcaption>Photo taken by Lauro Rossi</figcaption>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe cumque, quia tempore tenetur aspernatur molestiae exercitationem id placeat, quasi est, aliquid minus ipsum animi quas deserunt ad nostrum minima eaque ullam! Neque aspernatur laborum minima vitae, sequi laboriosam quia maiores ipsa ut officia ab totam, ducimus perspiciatis hic, rem natus soluta dolorum error deserunt doloribus modi recusandae maxime. Eveniet sit consequuntur quia, expedita commodi modi aliquam doloribus laboriosam neque eligendi ut obcaecati eos placeat, distinctio natus hic veritatis consectetur. Expedita doloremque enim ab repellendus ipsa voluptatibus velit provident. Nihil nostrum explicabo quibusdam accusamus quia soluta hic quo mollitia cumque numquam facilis, ex omnis vero quaerat, alias provident! Sit modi praesentium cumque optio corrupti illum doloremque architecto eligendi, quibusdam quia sequi ducimus nesciunt consequatur adipisci hic tempore consequuntur alias beatae dolor atque a minima vitae. Ipsa nam et sint possimus est vel ea exercitationem nostrum? Deserunt ullam voluptas nostrum explicabo sunt! Recusandae qui nam, accusamus dolorum praesentium architecto fuga quae voluptas eius omnis vero dolor reprehenderit sit. Voluptatibus tempora, quibusdam distinctio aliquid debitis voluptate unde illum exercitationem itaque eos eveniet! Numquam laboriosam praesentium minus corporis, quo quas maxime! Ipsa porro nisi est officia voluptates dolore, eaque, sequi quo id, facilis ullam.</p>
+                        <h2>Sit amet consectetur, adipisicing elit. Voluptatem, ea?</h2>
+                        <p>Hic quo facere sint exercitationem accusamus nesciunt odio repellendus, corrupti, minus doloribus excepturi velit alias natus aspernatur obcaecati temporibus tempore perspiciatis cumque debitis aliquam minima autem magnam eum. Dolor, optio? Omnis, perspiciatis magni. Nisi aut pariatur facere id! Adipisci eius nesciunt, quod autem quis illum dolorum et numquam, illo iste vitae temporibus commodi expedita. Ipsa voluptas inventore dolor quod quia aliquam adipisci odit, eaque voluptates repudiandae totam eius consequatur. Dolores dicta aut sapiente dignissimos laudantium repellendus itaque ipsum aliquid modi sequi fugit ad quis deserunt eligendi voluptate incidunt ut voluptatibus, explicabo vitae? Nisi doloremque perferendis nam nobis aliquam officia ea dolore. Delectus magni fugit eligendi! Omnis doloribus recusandae illo! Incidunt aliquid, fuga placeat, nihil repudiandae ipsa consequuntur voluptate fugit non aliquam tenetur ut velit voluptatem magnam dicta sint modi deleniti quibusdam vitae iure sunt in asperiores facere. Necessitatibus expedita dolorum fuga! Incidunt odit quibusdam fuga possimus tenetur distinctio delectus explicabo, provident mollitia? Saepe veniam vero atque tenetur obcaecati dolorum magni hic quis delectus, ipsam sapiente fugiat at alias sed repellendus minus, sit totam amet nostrum. Autem repellat explicabo dolorem et, id tenetur nulla molestias, optio assumenda pariatur culpa dignissimos, aut debitis porro.</p>
+                        <div class="single-post-tags">
+                            Tags:
+                            <a href="#" rel="tag">Technology</a>
+                            <a href="#" rel="tag">Device</a>
+                            <a href="#" rel="tag">HTML5</a>
+                            <a href="#" rel="tag">CSS3</a>
                         </div>
                     </div>
                 </div>

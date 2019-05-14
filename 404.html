@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <title>Blog</title>
+    <title>Douglas Salvagni</title>
 </head>
 <body>
     <header>
         <div class="navHolder">
-            <div class="menuTop">
+            <div class="menuTop clearfix">
                 <ul class="left">
                     <li><a href="#">Temperatura</a></li>
                     <li><a href="#">About</a></li>
@@ -32,7 +32,7 @@
             <div class="container topContent">
                 <i id="openMobileMenu" class="fas fa-bars right"></i>
                 <h1 class="logo">
-                    <a href="#">Blog<span>Logo</span></a>
+                    <a href="#">Logo<span>mark</span></a>
                 </h1>
             </div>
         </div>
@@ -41,10 +41,29 @@
     <nav>
         <ul>
             <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Healthy</a></li>
-            <li><a href="#">Travel</a></li>
-            <li><a href="#">Fashion</a></li>
+            <li><a href="#">Posts</a>
+                <ul>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Categories</a>
+                        <ul>
+                            <li><a href="#">HTML5</a></li>
+                            <li><a href="#">CSS3</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vídeos</a></li>
+                    <li><a href="#">Images</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Pages</a>
+                <ul>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="404.html">404</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Shortcodes</a></li>
         </ul>
         <div class="searchNavWrap">
             <i id="openSearch" class="fas fa-search"></i>
@@ -56,18 +75,36 @@
     </nav>
     <div class="mobileSidebar">
         <div class="searchWrap">
-            <i id="OpenSearch" class="fas fa-search"></i>
-            <form id="search" action="" class="search">
+            <form  action="" class="flexCenter">
                 <input type="text" placeholder="Search an article">
                 <button>Search</button>
             </form>
         </div>
         <ul>
             <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Healthy</a></li>
-            <li><a href="#">Travel</a></li>
-            <li><a href="#">Fashion</a></li>
+            <li><a href="#">Posts<i class="fas fa-angle-down accordion"></i></a>
+                <ul class="panel">
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#" >Categories<i class="fas fa-angle-down accordion"></i></a>
+                        <ul class="panel">
+                            <li><a href="#">HTML5</a></li>
+                            <li><a href="#">CSS3</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vídeos</a></li>
+                    <li><a href="#">Images</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Pages<i class="fas fa-angle-down accordion"></i></a>
+                <ul class="panel">
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">404</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Shortcodes</a></li>
         </ul>
     </div>
     <div class="contentOverlay"></div>
