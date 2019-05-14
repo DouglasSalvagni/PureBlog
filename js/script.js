@@ -52,8 +52,14 @@ for (let i = 0; i < accordion.length; i++) {
 
 document.querySelector('#openSearch').onmouseenter = function() {
     document.querySelector('#search').classList.add('searchNavWrapIsOpen')
-    document.getElementById('search').onmouseleave = function() {
-        document.querySelector('#search').classList.remove('searchNavWrapIsOpen')
-    }
 }
+
+document.getElementById('search').onmouseleave = function() {
+    document.querySelector('#search').classList.remove('searchNavWrapIsOpen')
+}
+
+document.querySelector('#openSearch').onclick = function() {
+    document.querySelector('#search').classList.toggle('searchNavWrapIsOpen')
+}
+
 
