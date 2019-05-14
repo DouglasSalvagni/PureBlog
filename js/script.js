@@ -50,9 +50,10 @@ for (let i = 0; i < accordion.length; i++) {
 
 // OPEN SEARCH NAV HEADER
 
-document.querySelector('#openSearch').onclick = function() {
-    document.querySelector('#search').classList.toggle('searchNavWrapIsOpen')
+document.querySelector('#openSearch').onmouseenter = function() {
+    document.querySelector('#search').classList.add('searchNavWrapIsOpen')
+    document.getElementById('search').onmouseleave = function() {
+        document.querySelector('#search').classList.remove('searchNavWrapIsOpen')
+    }
 }
-
-
 
