@@ -346,12 +346,17 @@ nav>ul>li>ul>li:hover ul {
 nav>ul>li>ul {
     display: block;
     position: absolute;
-    background: #DE9E36;
+    background: #fff;
     visibility: hidden;
     opacity: 0;
     width: 200px;
-    box-shadow: 0 8px 6px -6px #37323E;
+    box-sizing: border-box;
+    border-bottom: solid 2px #333;
+    border-left: solid 2px #333;
+    border-right: solid 2px #333;
+    box-shadow: 0 8px 15px -5px #37323E;
 }
+
 nav>ul>li:hover>ul {
     visibility: visible;
     opacity: 1;
@@ -360,27 +365,33 @@ nav>ul>li:hover>ul {
          -o-transition: all 0.2s ease-in-out;
             transition: all 0.2s ease-in-out;
 }
-nav>ul>li:hover>ul>li>a {
-}
+
 nav>ul>li>ul>li {
     display: block;
     text-align: left;
 }
-nav>ul>li>ul>li>a{
-    display: block;
-    padding: 10px;
-    color: #FFF;
+
+nav>ul>li>ul>li>a {
+    color: #333;
+    border-bottom: solid 1px #999;
 }
+    nav>ul>li>ul>li:last-of-type a {
+        border-bottom: none;
+    }
+
 nav>ul>li>ul>li:hover{
     background: #37323E;
 }
+    nav>ul>li>ul>li:hover a{
+        color: #FFF;
+    }
 
 /*-sub-menu-*/
 
 .arrow::before {
     position: absolute;
     content: ">";
-    color: #fff;
+    color: #333;
     right: 15px;
     top: 12px;
     font-weight: bold;
@@ -393,6 +404,7 @@ nav>ul>li>ul>li:hover{
 nav>ul>li ul li:hover.arrow::before {
     right: 15px;
     top: 12px;
+    color: #FFF;
     font-weight: bold;
     animation: none;
     transform: rotate(90deg);
@@ -404,7 +416,7 @@ nav>ul>li ul li:hover.arrow::before {
 
 @keyframes arrowanimation {
     25% {}
-    50% {right: 15px}
+    30% {right: 15px}
     75% {right: 10px}
     100% {right: 15px}
 }
@@ -415,7 +427,7 @@ nav li {
 
 nav>ul>li ul li ul {
     position: absolute;
-    left: 200px;
+    left: 196px;
     margin-top: -39px;
     background: #37323E;
     width: 200px;
@@ -437,7 +449,9 @@ nav>ul>li ul li {
 nav>ul>li ul li a{
     display: block;
     padding: 10px;
-    color: #FFF;
+}
+nav>ul>li ul li ul li a{
+    color: #fff;
 }
 nav>ul>li>ul>li ul li:hover{
     background: #6D6A75;
