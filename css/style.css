@@ -313,6 +313,13 @@ nav {
 nav ul{
     display: inline-block;
 }
+nav ul li ul li {
+    height: 36px;
+    line-height: 18px;
+}
+nav ul li ul li a{
+    font-size: 0.8em;
+}
 nav>ul>li {
     display: inline-block;
     position: relative;
@@ -350,7 +357,6 @@ nav>ul>li>ul {
     visibility: hidden;
     opacity: 0;
     width: 200px;
-    box-sizing: border-box;
     border-bottom: solid 2px #333;
     border-left: solid 2px #333;
     border-right: solid 2px #333;
@@ -366,18 +372,9 @@ nav>ul>li:hover>ul {
             transition: all 0.2s ease-in-out;
 }
 
-nav>ul>li>ul>li {
-    display: block;
-    text-align: left;
-}
-
 nav>ul>li>ul>li>a {
     color: #333;
-    border-bottom: solid 1px #999;
 }
-    nav>ul>li>ul>li:last-of-type a {
-        border-bottom: none;
-    }
 
 nav>ul>li>ul>li:hover{
     background: #37323E;
@@ -394,6 +391,7 @@ nav>ul>li>ul>li:hover{
     color: #333;
     right: 15px;
     top: 12px;
+    opacity: 0.2;
     font-weight: bold;
     animation: arrowanimation 2s infinite;
     -webkit-transition: transform 0.4s;
@@ -401,11 +399,15 @@ nav>ul>li>ul>li:hover{
          -o-transition: transform 0.4s;
             transition: transform 0.4s;
 }
+nav>ul>li>ul>li ul li.arrow::before {
+    color: #FFF;
+}
 nav>ul>li ul li:hover.arrow::before {
     right: 15px;
     top: 12px;
     color: #FFF;
     font-weight: bold;
+    opacity: 1;
     animation: none;
     transform: rotate(90deg);
     -webkit-transition: transform 0.4s;
@@ -415,10 +417,10 @@ nav>ul>li ul li:hover.arrow::before {
 }
 
 @keyframes arrowanimation {
-    25% {}
-    30% {right: 15px}
-    75% {right: 10px}
-    100% {right: 15px}
+    25% {opacity: 0.2;}
+    30% {right: 15px; opacity: 0.2;}
+    75% {right: 10px; opacity: 1;}
+    100% {right: 15px;  opacity: 0.2;}
 }
 
 nav li {
@@ -655,6 +657,12 @@ nav>ul>li>ul>li ul li:hover{
 }
 .rotate {
     transform: rotate(180deg);
+}
+
+.parent {
+    background: #999;
+    color: #FFF !important;
+    transition:  0.8s;
 }
 
 .panel-is-open {

@@ -42,7 +42,9 @@ var accordion = document.querySelectorAll('.accordion')
 for (let i = 0; i < accordion.length; i++) {
     accordion[i].addEventListener('click', function() {
         this.classList.toggle('rotate')
+        let parent = this.parentElement
         let panel = this.parentElement.nextElementSibling
+        parent.classList.toggle('parent')
         panel.classList.toggle('panel-is-open')
     })
 }
