@@ -71,6 +71,6 @@ var submenu = document.querySelectorAll('nav ul li ul li')
 for (var i = 0; i < submenu.length; i++) {
     var target = submenu[i]
     if (target.lastElementChild.localName === 'ul') {
-        console.log(target.classList.add('arrow'))
+        target.classList.add('arrow')
     }
 }
