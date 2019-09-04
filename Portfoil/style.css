@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1fc8db;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+::selection {
+    background: aqua;
+    color: #343434;
+}
+
+.wrapper {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.main-content {
+    width: 600px;
+    height: 50%;
+}
+
+.main-card {
+    text-align: center;
+    color: #fff;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.main-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main-card h1 {
+    text-transform: uppercase;
+    word-spacing: 20px;
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+
+.main-card span {
+    background: #fff;
+    color: aqua;
+    padding: 0 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: box-shadow 0.4s linear;
+}
+.main-card span:hover {
+    box-shadow: 0px 0px 15px #fff;
+    transition: box-shadow 0.4s linear;
+}
+
+.box1 {
+    display: inline-block;
+    animation: upscale 3s;
+    animation-fill-mode: forwards;
+    background-image: url('img/logo.png');
+    background-size: cover;
+    border-radius: 4px;
+    width: 0px;
+    height: 0px;
+    vertical-align: top;
+}
+
+.box2 {
+    display: inline-block;
+    animation: upscale 3s 2s;
+    animation-fill-mode: forwards;
+    background-image: url('img/logo.png');
+    background-size: cover;
+    border-radius: 4px;
+    width: 0px;
+    height: 0px;
+    vertical-align: top;
+}
+
+.box3 {
+    display: inline-block;
+    animation: upscale 3s 4s;
+    animation-fill-mode: forwards;
+    background-image: url('img/logo.png');
+    background-size: cover;
+    border-radius: 4px;
+    width: 0px;
+    height: 0px;
+    vertical-align: top;
+}
+
+@keyframes upscale {
+    0%   {width: 0px; margin-right: 20px; }
+    1%   {border: solid #fff 2px; }
+    25%  {width: 100px; height: 0px;}
+    50%  {width: 100px; height: 100px}
+    100% {width: 100px; height: 100px; border: solid #fff 2px; margin-right: 20px; box-shadow: 0px 3px 3px rgb(41, 68, 87, 0.6);}
+}

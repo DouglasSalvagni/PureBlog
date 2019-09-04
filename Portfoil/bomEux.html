@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        #overlay {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background: black;
+            opacity: 0;
+            transition: 1s;
+        }
+        
+        .home-container {
+            background-color: #1fc8db;
+            background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+           
+        }
+
+        .b1 {
+            position: fixed;
+            width: 200px;
+            height: 30px;
+            background: black;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            top: calc(50% - 15px);
+            left: calc(50% - 100px);
+            transition: 2s;
+            z-index: 101;
+        }
+
+        .dark-area {
+            position: absolute;
+            border-top: solid 5px #666;
+            background: black;
+            display: inline-block;
+            width: 100%;
+            height: calc(100vh - 50%);
+            box-sizing: border-box;
+            top: 50%;
+            z-index: 100;
+            color: #666;
+            text-align: center;
+            line-height: 80px;
+            overflow: hidden;
+        }
+
+        .dark-area::after {
+            content: "";
+            position: absolute;
+            background-color: #666;
+            width: 30px;
+            height: 30px;
+            top: -15px;
+            left: calc(50% - 15px);
+            transform: rotate(45deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="overlay"></div>
+    <main class="home-container">
+        <div id="b1" class="b1">Follow de arrow</div>
+        <div class="dark-area"> DARK AREA</div>
+    </main>
+</body>
+<script>
+
+    var overlay = document.getElementById("overlay")
+    var b1 = document.getElementById("b1")
+    var midleScreen = window.innerHeight / 2
+    
+    window.onmousemove = function (e) {
+
+        b1.style.top = e.pageY + 15 + "px"
+        b1.style.left = e.pageX + 15 + "px"
+
+
+        if (e.pageY > midleScreen) {
+            overlay.style.opacity = "1"
+            b1.style.backgroundColor = "red"
+        } else {
+            overlay.style.opacity = "0"
+            b1.style.backgroundColor = "black"
+        }
+
+    }
+
+</script>
+</html>

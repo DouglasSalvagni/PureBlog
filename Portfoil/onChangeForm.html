@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        
+        .overflow_hidden {
+            overflow: hidden;
+        }
+        .main_wrapper {
+            width: 960px;
+            margin: 10% auto 0 auto;
+        }
+        .sidebar {
+            width: 250px;
+            position: relative;
+            display: inline-block;
+            margin: -2px 48px -2px -2px;
+            vertical-align: top;
+        }
+        .content {
+            width: 660px;
+            height: 750px;
+            background-image: url('img/onchange/body.png');
+            background-repeat: no-repeat;
+            display: inline-block;
+            margin: -2px;
+        } 
+
+        .form_box {
+            width: 100%;
+            padding: 20px;
+            border-radius: 20px;
+            border: solid 2px #fff;
+            background: white;
+            opacity: 0.3;
+            margin-bottom: 20px;
+            transition: 0.4s;
+            color: #1fc8db;
+        }
+
+        .form_box:hover {
+            opacity: 1;
+        }
+
+        .form_box h2 {
+            opacity: 1;
+            margin-bottom: 10px;
+        }
+
+        form select {
+            width: 200px;
+        }
+        form input {
+            margin-bottom: 10px;
+        }
+        
+        .item {
+            width: 660px;
+            height: 750px;
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .face {
+            background-image: url('img/onchange/face1.png');
+            background-repeat: no-repeat;
+            z-index: 100;
+            visibility: visible;
+            transition: 0.4s;
+        }
+
+        .print {
+            background-image: url('img/onchange/print1.png');
+            background-repeat: no-repeat;
+            z-index: 101;
+            visibility: visible;
+            transition: 0.4s;
+        }
+
+        .mainface {
+            background-image: url('img/onchange/mainFace.png');
+            background-repeat: no-repeat;
+            z-index: 101;
+            visibility: visible;
+        }
+
+        .glasses {
+            background-image: url('img/onchange/glasses1.png');
+            background-repeat: no-repeat;
+            z-index: 102;
+        }
+
+        .helmet {
+            background-image: url('img/onchange/helmet1.png');
+            background-repeat: no-repeat;
+            z-index: 103;
+        }
+        
+    </style>
+</head>
+<body>
+    <main class="home-container overflow_hidden">
+        <div class="main_wrapper">
+            <div class="sidebar">
+                <div class="form_box">
+                    <h2>Face</h2>
+                    <form>
+                        <input type="radio" name="face" value="face1" checked> face 1<br>
+                        <input type="radio" name="face" value="face2"> face 2<br>
+                        <input type="radio" name="face" value="face3"> face 3 <br>
+                        <input type="radio" name="face" value="face4"> face 4 <br>
+                    </form>
+                </div>
+                <div class="form_box">
+                    <h2>Adornments</h2>
+                    <form>
+                        <input type="checkbox" name="adornments" value="helmet"> Helmet Viking<br>
+                        <input type="checkbox" name="adornments" value="glasses"> Glasses<br>
+                    </form>
+                </div>
+                <div class="form_box">
+                    <h2>Shirt Print</h2>
+                    <form>
+                        <select id="options">
+                            <option value="opt1">Power</option>
+                            <option value="opt2">Joystick</option>
+                            <option value="opt3">Ghost</option>
+                            <option value="opt4">Spock</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="content">
+                <div id="face" class="item face"></div>
+                <div class="item mainface"></div>
+                <div id="print" class="item print"></div>
+                <div id="glasses" class="item glasses"></div>
+                <div id="helmet" class="item helmet"></div>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+
+    //FACE
+    
+    var radio_face = document.getElementsByName('face')
+
+    for (let a = 0; a < radio_face.length; a++) {
+        radio_face[a].onchange = () => {
+            
+            for (let a = 0; a < radio_face.length; a++) {
+
+                if (radio_face[a].checked) {
+                    document.getElementById('face').style.backgroundImage = 'url("img/onchange/face'+ (a + 1) +'.png")'
+                }
+            }
+
+        }
+    }
+
+    //ADORNMENTS
+    
+    var radio_ador = document.getElementsByName('adornments')
+    console.log(radio_ador)
+
+    for (let a = 0; a < radio_ador.length; a++) {
+        radio_ador[a].onchange = () => {
+            
+            for (let a = 0; a < radio_ador.length; a++) {
+
+                if (radio_ador[a].checked && radio_ador[a].value === 'helmet') {
+                    document.getElementById('helmet').style.visibility = 'visible'
+                } 
+                if (radio_ador[a].checked === false && radio_ador[a].value === 'helmet') {
+                    document.getElementById('helmet').style.visibility = 'hidden'
+                }
+                if (radio_ador[a].checked && radio_ador[a].value === 'glasses') {
+                    document.getElementById('glasses').style.visibility = 'visible'
+                } 
+                if (radio_ador[a].checked === false && radio_ador[a].value === 'helmet') {
+                    document.getElementById('glasses').style.visibility = 'hidden'
+                }
+
+            }
+
+        }
+    }
+        
+    //SHIRT PRINT
+    document.getElementById('options').onchange = function () {
+        
+
+        var selected_option = document.getElementById('options');
+        var selected_index = selected_option.options.selectedIndex;
+        switch (selected_index) {
+            case 0:
+                document.getElementById('print').style.backgroundImage = 'url("img/onchange/print'+ (selected_index+1) +'.png")'
+                break
+            case 1:
+                document.getElementById('print').style.backgroundImage = 'url("img/onchange/print'+ (selected_index+1) +'.png")'
+                break
+            case 2:
+                document.getElementById('print').style.backgroundImage = 'url("img/onchange/print'+ (selected_index+1) +'.png")'
+                break
+            case 3:
+                document.getElementById('print').style.backgroundImage = 'url("img/onchange/print'+ (selected_index+1) +'.png")'
+                break
+        }
+        
+    }
+
+</script>
+</html>

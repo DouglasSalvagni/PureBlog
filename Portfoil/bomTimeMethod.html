@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: white;
+            font-size: 4em;
+        }
+
+        button {
+            display: inline-block;
+            padding: 5px 10px;
+            border: solid 1px rgb(39, 140, 255);
+            background-color: cyan;
+            width: 80px;
+            outline: none;
+        }
+
+        section {
+            display: block;
+            text-align: center;
+            margin-bottom: 90px;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="home-container center">
+        <div class="">
+            <section>
+                <h1>Hora Atual</h1>
+                <h1 id="current_time">00:00:00</h1>
+            </section>
+            <section>
+                <h1>Cronômetro</h1>
+                <h1 id="timer_display">00:00:00</h1>
+                <div class="center">
+                    <button id="play" style="border-bottom-left-radius: 10px; border-top-left-radius: 10px;">Play</button>
+                    <button id="pause" style="border-bottom-left-radius: 10px; border-top-left-radius: 10px; background-color: white">Pause</button>
+                    <button id="reset" style="border-bottom-right-radius: 10px; border-top-right-radius: 10px;">Reset</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+</body>
+<script>
+
+    //current_time
+
+    
+    var current_time = new Date()
+    var current_hour = current_time.getHours()
+    var current_minute = current_time.getMinutes()
+    var current_second = current_time.getSeconds()
+    document.getElementById('current_time').innerHTML = number_format(current_hour) + ":" + number_format(current_minute) + ":" + number_format(current_second)
+
+    window.setInterval(function() {
+
+        current_time = new Date()
+        current_hour = current_time.getHours()
+        current_minute = current_time.getMinutes()
+        current_second = current_time.getSeconds()
+
+        document.getElementById('current_time').innerHTML = number_format(current_hour) + ":" + number_format(current_minute) + ":" + number_format(current_second)
+    }, 1000)
+
+    // stopwatch
+    var hour = 0
+    var minute = 0
+    var second = 0
+    var play = document.getElementById('play')
+    var pause = document.getElementById('pause')
+    pause.style.display = 'none'
+    
+
+    document.getElementById('play').onclick = function() {
+
+        play.style.display = 'none'
+        pause.style.display = 'inline-block'
+
+        var clock = window.setInterval(function() {
+            
+            if (second > 58) {
+                second = 0
+                minute = minute + 1
+            } else {
+                second = second + 1
+            }
+
+            if (minute > 58) {
+                minute = 0
+                hour = hour + 1
+            }
+
+
+            document.getElementById('timer_display').innerHTML =  number_format(hour) + ":" + number_format(minute) + ":" + number_format(second)
+        }, 1000)
+
+        document.getElementById('pause').onclick = function() {
+            
+            window.clearInterval(clock)
+            play.style.display = 'inline-block'
+            pause.style.display = 'none'
+    
+        }
+        
+        document.getElementById('reset').onclick = function() {
+    
+            window.clearInterval(clock)
+            play.style.display = 'inline-block'
+            pause.style.display = 'none'
+            hour = 0
+            minute = 0
+            second = 0
+            document.getElementById('timer_display').innerHTML =  number_format(hour) + ":" + number_format(minute) + ":" + number_format(second)
+    
+        }
+    }
+
+
+
+    //number formater
+
+    function number_format(time) {
+        if (time >= 0 && time <= 9) {
+            var formatted_time = time.toString()
+            formatted_time = "0" + formatted_time
+        } else {
+            var formatted_time = time.toString()
+        }
+        return formatted_time
+    }
+
+
+</script>
+</html>
