@@ -1,0 +1,144 @@
+.homePage {
+
+    header {
+        height: auto;
+
+        @include media-breakpoint-up(lg) {
+            height: 900px;
+        }
+    }
+
+    .center-logo {
+        img {
+            width: 100%;
+
+            @include media-breakpoint-up(md) {
+                width: auto;
+            }
+        }
+
+        span {
+            font-size: 1.8rem;
+            color: $gray-500;
+        }
+    }
+}
+
+.bg-main {
+    background-image: url('../assets/homeBackground.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.backTop {
+
+    a {
+        position: fixed;
+        bottom: 60px;
+        right: 50px;
+        font-size: 50px;
+        z-index: 101;
+        color: $seco;
+        text-decoration: none;
+        opacity: 0.5;
+        transition: 0.3s;
+        animation: jump .6s linear alternate infinite;
+    }
+
+    a:hover {
+        opacity: 1;
+        animation: none;
+    }
+
+    p {
+        font-size: 0.8rem;
+        animation: none;
+    }
+}
+
+@keyframes jump {
+    0%   {transform: translate3d(0,0,0) ;}
+    40%  {transform: translate3d(0,3%,0) ;}
+    100% {transform: translate3d(0,10%,0) ;}
+  }
+
+
+.section-1 {
+
+    background-color: $primary;
+
+    img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+}
+
+.section-2 {
+
+    background-image: url('../assets/bg-home-section2.jpg');
+    background-size: cover;
+
+    h2 {
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.50);
+    }
+
+    .container {
+
+        height: auto;
+        
+        @include media-breakpoint-up(lg) {
+            height: 900px;
+        }
+
+    }
+}
+
+
+.section-3 {
+
+    background-color: $primDark;
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    .icon {
+        font-size: 50px;
+    }
+
+    p {
+        color: $primLight;
+    }
+}
+
+.section-4 {
+    background-image: url('../assets/homeBackground.png');
+    background-attachment: fixed;
+    background-size: cover;
+
+    .container {
+        height: 400px;
+    }
+}
+
+.section-5 {
+
+    background-color: $primDark;
+
+    .card {
+        background: $primary;
+    }
+
+}
+
+// writing over bootstrap
+
+.homePage .navbar-nav .nav-item .nav-link.active{
+    border: solid 2px $primDark;
+    border-radius: 15px;
+}
+
+

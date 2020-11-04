@@ -1,0 +1,30 @@
+@import '~bootstrap/scss/bootstrap';
+
+.text-primDark {
+    color: $primDark !important;
+}
+
+.text-primLight {
+    color: $primLight !important;
+}
+
+.text-secoDark {
+    color: $secoDark !important;
+}
+
+.text-secoLight {
+    color: $secoLight !important;
+}
+
+.bg-primDark {
+    background: $primDark !important;
+}
+
+
+.svgPrimaryColor {
+    fill: $primary;
+}
+
+.svgPrimaryDarkColor {
+    fill: $primDark;
+}

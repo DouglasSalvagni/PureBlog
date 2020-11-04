@@ -1,0 +1,16 @@
+@import '~bootstrap/scss/bootstrap';
+@import './_colors.scss';
+@import './_home.scss';
+@import './signIn';
+@import './iconInput';
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+footer {
+    position: relative;
+    color: $primLight;
+}
+

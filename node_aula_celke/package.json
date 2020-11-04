@@ -1,0 +1,17 @@
+{
+  "name": "node_aula_celke",
+  "version": "1.0.0",
+  "description": "cursonode",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \\\"Erro: no test specified\\\" && exit 1"
+  },
+  "author": "Douglas Salvagni",
+  "license": "ISC"
+}
